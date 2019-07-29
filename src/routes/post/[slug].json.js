@@ -1,5 +1,11 @@
 const showdown = require('showdown');
-const converter = new showdown.Converter({ metadata: true });
+const showdownHighlight = require("showdown-highlight");
+const converter = new showdown.Converter({ 
+    extensions: [showdownHighlight],
+    metadata: true, 
+    simpleLineBreaks: true, 
+    tables: true 
+});
 const fs = require('fs');
 const fsPromises = fs.promises;
 
@@ -8,11 +14,11 @@ const lookupTable = new Map();
 (async () =>{
     const dir = await fsPromises.readdir('src/blogposts');
     const loadFiles = dir.map(file => fsPromises.readFile(`src/blogposts/${file}`, 'utf8'));
-    const files = await Promise.all(loadFiles);
+    const files = await Promise.all(loadFiles); 
     const metedata = files.map(file => {
         const html = converter.makeHtml(file);
         const metedata = converter.getMetadata();
-        lookupTable.set(metedata.slug, html)
+        lookupTable.set(metedata.slug, JSON.stringify({ html, metedata }))
     });
 })()
 

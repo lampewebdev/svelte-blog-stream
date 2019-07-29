@@ -17,22 +17,34 @@
 		margin: 0 0 1em 0;
 		line-height: 1.5;
 	}
+	.main-page {
+		position: relative;
+		max-width: 56em;
+		background-color: white;
+		padding: 2em;
+		margin: 0 auto;
+		box-sizing: border-box;
+	}
 </style>
 
 <svelte:head>
 	<title>Blog</title>
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/default.min.css">
+	<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 </svelte:head>
-
-<h1>Recent posts</h1>
-{#await metadata}
-	<p>loading...</p>
-{:then value}
-	{#each value as post}
-		<li><a rel='prefetch' href='/post/{post.slug}'>{post.title}</a></li>
-	{/each}
-{:catch error}
-	<p>Oppsie!</p>
-	{error}
-{/await}
-<ul>
-</ul>
+<div class="main-page">
+	<h1>Recent posts</h1>
+	{#await metadata}
+		<p>loading...</p>
+	{:then value}
+		{#each value as post}
+			<li><a rel='prefetch' href='/post/{post.slug}'>{post.title}</a></li>
+		{/each}
+	{:catch error}
+		<p>Oppsie!</p>
+		{error}
+	{/await}
+	<ul>
+	</ul>
+</div>

@@ -2,7 +2,7 @@
     export function preload({ params }) {
         try {
             return this.fetch(`post/${params.slug}.json`)
-                .then(request => request.text())
+                .then(request => request.json())
                 .then(post => { 
                             return { post }
             });
@@ -20,9 +20,16 @@
 	export let post;
 </script>
 
+<svelte:head>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/default.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</svelte:head>
+
 {#await post}
     <p> loading... </p>
 {:then value}
+
     <Post post={value} />
 {:catch error}
 	<p>Oppsie!</p>

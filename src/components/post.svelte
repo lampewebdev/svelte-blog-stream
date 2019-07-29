@@ -2,10 +2,14 @@
     export let post
 </script>
 <style>
-.blog-post{
-    background-color: darkmagenta;
-}
+.blog-post{}
 </style>
 <div class="blog-post">
-    {@html post}
+    <header>
+        <h1> {post.metedata.title} </h1>
+        {post.metedata.createdAt}
+    </header>
+    <article>
+        {@html post.html}
+    </article>
 </div>
