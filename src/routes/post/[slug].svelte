@@ -1,21 +1,20 @@
 <script context="module">
     export function preload({ params }) {
-        try {
-            return this.fetch(`post/${params.slug}.json`)
-                .then(request => request.json())
-                .then(post => { 
-                            return { post }
-            });
-        } catch (error) {
-            console.log(error)
-        }
-
+    	try {
+    		return this.fetch(`post/${params.slug}.json`)
+    			.then(request => request.json())
+    			.then(post => { 
+    				return { post };
+    			});
+    	} catch (error) {
+    		console.log(error);
+    	}
     }
 </script>
 
 
 <script>
-	import Post from '../../components/Post.svelte';
+	import Post from "../../components/Post.svelte";
 
 	export let post;
 </script>
