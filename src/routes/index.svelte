@@ -1,10 +1,10 @@
 <script context="module">
 	export function preload() {
-		return this.fetch('index.json')
+		return this.fetch("index.json")
 			.then(request => request.json())
 			.then(metadata => {
 				return { metadata };
-		});
+			});
 	}
 </script>
 
@@ -30,21 +30,22 @@
 <svelte:head>
 	<title>Blog</title>
 	<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/styles/default.min.css">
-	<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.15.8/build/highlight.min.js"></script>
-	<script>hljs.initHighlightingOnLoad();</script>
 </svelte:head>
+
 <div class="main-page">
 	<h1>Recent posts</h1>
 	{#await metadata}
 		<p>loading...</p>
 	{:then value}
-		{#each value as post}
-			<li><a rel='prefetch' href='/post/{post.slug}'>{post.title}</a></li>
-		{/each}
+		<ul>
+			{#each value as post}
+				<li><a rel='prefetch' href='/post/{post.slug}'>{post.title}</a></li>
+			{/each}
+		</ul>
 	{:catch error}
 		<p>Oppsie!</p>
-		{error}
+	{error}
 	{/await}
-	<ul>
-	</ul>
+	
+	
 </div>
