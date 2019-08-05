@@ -10,29 +10,42 @@
 
 <script>
 	export let metadata;
-	export let bar = "great-success";
 </script>
 
 <svelte:head>
-		<title>Blog</title>
+	<title>Blog</title>
 </svelte:head>
 
 <div class="main-page">
-	<h1>Recent posts</h1>
 	{#await metadata}
-		
 		<progress class="progress is-medium is-dark" max="100">45%</progress>
 	{:then value}
-		<ul>
+	<div class="columns is-mobile is-centered">
+		<div class="column is-full-mobile is-three-quarters-tablet">
 			{#each value as post}
-				<li><a rel='prefetch' href='/post/{post.slug}'>{post.title}</a></li>
-			{/each}
-		</ul>
+			<section class="section">
+				<div class="card">
+					<div class="card-content">
+						<p class="title">
+							{post.title}
+						</p>
+						<p class="subtitle">
+							Part of: {post.series}
+						</p>
+						<div class="content">
+							{post.description}
+						</div>
+					</div>
+					<footer class="card-footer">
+						<a rel='prefetch' class="card-footer-item" href='/post/{post.slug}'>Read more...</a>
+					</footer>
+				</div>
+			</section>	
+			{/each}			
+		</div>
+	</div>
 	{:catch error}
 		<p>Oppsie!</p>
 		{error}
-	{/await}
-
-	<h1>hello!</h1>
-	{@debug bar}
+	{/await}}
 </div>
