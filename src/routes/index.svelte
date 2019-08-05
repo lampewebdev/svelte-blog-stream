@@ -8,14 +8,10 @@
 	}
 </script>
 
-<script>	
+<script>
 	export let metadata;
 	export let bar = "great-success";
 </script>
-
-<style>
-
-</style>
 
 <svelte:head>
 		<title>Blog</title>

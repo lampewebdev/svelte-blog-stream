@@ -1,4 +1,5 @@
 <script>
+	import "bulma/css/bulma.css";
 	import Nav from "../components/Nav.svelte";
 
 	export let segment;

@@ -14,6 +14,17 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 const onwarn = (warning, onwarn) => (warning.code === "CIRCULAR_DEPENDENCY" && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning);
 const dedupe = importee => importee === "svelte" || importee.startsWith("svelte/");
 
+const preprocessOptions = {
+	transformers: {
+		postcss: {
+			plugins: [
+				require("postcss-import")(),
+				require("postcss-url")(),
+			]
+		}
+	}
+};
+
 export default {
 	client: {
 		input: config.client.input(),
@@ -26,7 +37,7 @@ export default {
 			svelte({
 				dev,
 				hydratable: true,
-				emitCss: true
+				preprocess: require("svelte-preprocess")(preprocessOptions)
 			}),
 			resolve({
 				browser: true,
