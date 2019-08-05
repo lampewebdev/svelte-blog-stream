@@ -20,7 +20,8 @@
 <div class="main-page">
 	<h1>Recent posts</h1>
 	{#await metadata}
-		<p>loading...</p>
+		
+		<progress class="progress is-medium is-dark" max="100">45%</progress>
 	{:then value}
 		<ul>
 			{#each value as post}
@@ -31,4 +32,7 @@
 		<p>Oppsie!</p>
 		{error}
 	{/await}
+
+	<h1>hello!</h1>
+	{@debug bar}
 </div>
