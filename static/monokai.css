@@ -6,6 +6,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 pre, code {
     white-space: pre-wrap;
     word-wrap: break-word;
+    background-color: inherit;
 }
 
 .hljs {

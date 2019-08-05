@@ -1,3 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
 img {
 	max-width: 100%;
+}
+
+.blog-post img{
+	display: block;
+    margin: 0 auto;
+}
+.blog-post p,
+.blog-post h1,
+.blog-post h2,
+.blog-post h3,
+.blog-post span{
+	font-family: 'Josefin Sans', sans-serif;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.blog-post h1,
+.blog-post h2,
+.blog-post h3{
+	padding: 1.5rem;
+
+	color: #363636;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
 }
