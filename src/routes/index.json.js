@@ -11,7 +11,8 @@ export async function get(req, res) {
 	const dir = await fsPromises.readdir("src/blogposts");
 	const loadFiles = dir.map(file => fsPromises.readFile(`src/blogposts/${file}`, "utf8"));
 	const files = await Promise.all(loadFiles);
-	const metedata = files.map(file => {
+
+	const metedata = files.reverse().map(file => {
 		converter.makeHtml(file);
 		return converter.getMetadata();
 	});

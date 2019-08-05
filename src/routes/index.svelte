@@ -12,6 +12,22 @@
 	export let metadata;
 </script>
 
+<style>
+.title{
+	font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.125;
+}
+.button-wrapper{
+	margin: 1.5rem 0;
+}
+hr{
+	background-color: #363636;
+	border: none;
+    display: block;
+    height: 1px;
+}
+</style>
 <svelte:head>
 	<title>Blog</title>
 </svelte:head>
@@ -24,22 +40,21 @@
 		<div class="column is-full-mobile is-three-quarters-tablet">
 			{#each value as post}
 			<section class="section">
-				<div class="card">
-					<div class="card-content">
-						<p class="title">
-							{post.title}
+					<div class="header-content">
+						<div class="has-text-centered">
+							<h1 class="title">{post.title}</h1>
+						</div>
+						<p class="subheader-content has-text-centered">
+							Series: {post.series}
 						</p>
-						<p class="subtitle">
-							Part of: {post.series}
-						</p>
-						<div class="content">
+						<hr>
+						<div class="content has-text-centered">
 							{post.description}
 						</div>
 					</div>
-					<footer class="card-footer">
-						<a rel='prefetch' class="card-footer-item" href='/post/{post.slug}'>Read more...</a>
-					</footer>
-				</div>
+					<div class="button-wrapper has-text-centered">
+						<a rel='prefetch' class="button is-primary" href='/post/{post.slug}'>Continue Reading!</a>
+					</div>
 			</section>	
 			{/each}			
 		</div>

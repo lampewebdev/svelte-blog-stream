@@ -8,6 +8,14 @@ pre, code {
     word-wrap: break-word;
     background-color: inherit;
 }
+.hljs p,
+.hljs h1,
+.hljs h2,
+.hljs h3,
+.hljs span{
+	padding-left: 0.5em !important;
+	padding-right: 0.5rem !important;
+}
 
 .hljs {
     max-width: 100%;

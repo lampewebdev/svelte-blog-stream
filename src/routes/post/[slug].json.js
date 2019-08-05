@@ -14,7 +14,7 @@ const lookupTable = new Map();
 (async () => {
 	const dir = await fsPromises.readdir("src/blogposts");
 	const loadFiles = dir.map(file => fsPromises.readFile(`src/blogposts/${file}`, "utf8"));
-	const files = await Promise.all(loadFiles);
+	let files = await Promise.all(loadFiles);
 	files.map(file => {
 		const html = converter.makeHtml(file);
 		const metedata = converter.getMetadata();

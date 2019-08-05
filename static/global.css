@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
+body{
+	font-family: 'Josefin Sans', sans-serif;
+}
+
 img {
 	max-width: 100%;
 }
