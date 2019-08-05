@@ -11,7 +11,6 @@
 <script>	
 	export let metadata;
 	export let bar = "great-success";
-
 </script>
 
 <style>
@@ -23,7 +22,6 @@
 </svelte:head>
 
 <div class="main-page">
-	
 	<h1>Recent posts</h1>
 	{#await metadata}
 		<p>loading...</p>
@@ -35,6 +33,6 @@
 		</ul>
 	{:catch error}
 		<p>Oppsie!</p>
-	{error}
+		{error}
 	{/await}
 </div>

@@ -1,20 +1,20 @@
 const showdown = require("showdown");
 const showdownHighlight = require("showdown-highlight");
-const converter = new showdown.Converter({ 
+const converter = new showdown.Converter({
 	extensions: [showdownHighlight],
-	metadata: true, 
-	simpleLineBreaks: false, 
-	tables: true 
+	metadata: true,
+	simpleLineBreaks: false,
+	tables: true
 });
 const fs = require("fs");
 const fsPromises = fs.promises;
 
 // create a lookup table for the blog post accesed by slug!
 const lookupTable = new Map();
-(async () =>{
+(async () => {
 	const dir = await fsPromises.readdir("src/blogposts");
 	const loadFiles = dir.map(file => fsPromises.readFile(`src/blogposts/${file}`, "utf8"));
-	const files = await Promise.all(loadFiles); 
+	const files = await Promise.all(loadFiles);
 	files.map(file => {
 		const html = converter.makeHtml(file);
 		const metedata = converter.getMetadata();

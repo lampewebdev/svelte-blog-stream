@@ -2,21 +2,6 @@
     export let post;
 </script>
 <style>
-    /* .blog-post{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding: 0 20px;
-    }
-    h1 {
-	    text-align: center;
-	    font-size: 4em;
-        font-family: 'Blinker', sans-serif;
-    } */
-    /* p img {
-	    display:block;
-        margin:auto;
-    } */
 </style>
 
 <svelte:head>

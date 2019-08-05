@@ -3,16 +3,16 @@ module.exports = {
 		"browser": true,
 		"es6": true,
 		"node": true
-  },
-  "plugins":[
-    'svelte3',
-  ],
-  "overrides": [
-    {
-      "files": ['**/*.svelte'],
-      "processor": 'svelte3/svelte3'
-    }
-  ],
+	},
+	"plugins":[
+		'svelte3',
+	],
+	"overrides": [
+		{
+			"files": ['**/*.svelte'],
+			"processor": 'svelte3/svelte3'
+		}
+	],
 	"extends": "eslint:recommended",
 	"globals": {
 		"Atomics": "readonly",
@@ -39,5 +39,5 @@ module.exports = {
 			"error",
 			"always"
 		]
-  }
+	}
 };
