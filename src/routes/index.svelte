@@ -8,23 +8,14 @@
 	}
 </script>
 
-<script>
+<script>	
 	export let metadata;
+	export let bar = "great-success";
+
 </script>
 
 <style>
-	ul {
-		margin: 0 0 1em 0;
-		line-height: 1.5;
-	}
-	.main-page {
-		position: relative;
-		max-width: 56em;
-		background-color: white;
-		padding: 2em;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+
 </style>
 
 <svelte:head>
@@ -32,6 +23,7 @@
 </svelte:head>
 
 <div class="main-page">
+	
 	<h1>Recent posts</h1>
 	{#await metadata}
 		<p>loading...</p>

@@ -2,7 +2,7 @@
     export let post;
 </script>
 <style>
-    .blog-post{
+    /* .blog-post{
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -12,9 +12,10 @@
 	    text-align: center;
 	    font-size: 4em;
         font-family: 'Blinker', sans-serif;
-    }
-    /* .createdAt{
-
+    } */
+    /* p img {
+	    display:block;
+        margin:auto;
     } */
 </style>
 
