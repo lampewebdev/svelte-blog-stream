@@ -22,10 +22,10 @@
 	margin: 1.5rem 0;
 }
 hr{
-	background-color: #363636;
-	border: none;
+	border: 0;
     display: block;
-    height: 1px;
+    height: 0px;
+	border-top:#363636 solid 1px;
 }
 </style>
 <svelte:head>
@@ -37,7 +37,7 @@ hr{
 		<progress class="progress is-medium is-dark" max="100">45%</progress>
 	{:then value}
 	<div class="columns is-mobile is-centered">
-		<div class="column is-full-mobile is-three-quarters-tablet">
+		<div class="column is-full-mobile is-three-quarters-tablet is-half-desktop">
 			{#each value as post}
 			<section class="section">
 					<div class="header-content">
