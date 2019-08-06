@@ -4,6 +4,7 @@
 <svelte:head>
     <title>{post.metedata.title}</title>
     <link rel="stylesheet" href="/monokai.css">
+    <meta name="Description" content="{post.metedata.description}">
 </svelte:head>
 
 <div class="blog-post">

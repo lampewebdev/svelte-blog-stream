@@ -27,10 +27,10 @@
 
 	<div class="navbar-menu {showNavBar === true ? 'is-active' : ''}">
 		<div class="navbar-end">
-			<a class="navbar-item white" href="http://www.twitch.tv/lampewebdev" target="_blank">
+			<a class="navbar-item white" href="http://www.twitch.tv/lampewebdev" target="_blank" rel="noopener">
 				Twitch
 			</a>
-			<a class="navbar-item white" href="http://www.twitter.com/lampewebdev" target="_blank">
+			<a class="navbar-item white" href="http://www.twitter.com/lampewebdev" target="_blank" rel="noopener">
 				Twitter
 			</a>
 		</div>

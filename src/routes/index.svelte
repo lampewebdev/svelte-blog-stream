@@ -30,6 +30,7 @@ hr{
 </style>
 <svelte:head>
 	<title>Blog</title>
+	<meta name="Description" content="TODO!!!">
 </svelte:head>
 
 <div class="main-page">
