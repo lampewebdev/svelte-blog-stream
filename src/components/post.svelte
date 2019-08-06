@@ -8,14 +8,16 @@
 
 <div class="blog-post">
     <div class="columns is-mobile is-centered">
-        <div class="column is-full-mobile is-three-quarters-tablet">
-            <header>
-                <h1> {post.metedata.title} </h1>
-                <span class="createdAt">{post.metedata.createdAt}</span>
-            </header>
-            <article>
-                {@html post.html}
-            </article>
+        <div class="column is-full-mobile is-three-quarters-tablet is-half-desktop">
+            <section class="section">
+                <header>
+                    <h1> {post.metedata.title} </h1>
+                    <span class="createdAt">{post.metedata.createdAt}</span>
+                </header>
+                <article>
+                    {@html post.html}
+                </article>
+            </section>
         </div>
     </div>
 </div>

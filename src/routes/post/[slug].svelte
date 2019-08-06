@@ -25,7 +25,6 @@
 {#await post}
     <p> loading... </p>
 {:then value}
-
     <Post post={value} />
 {:catch error}
 	<p>Oppsie!</p>

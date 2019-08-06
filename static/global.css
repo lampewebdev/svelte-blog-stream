@@ -12,11 +12,18 @@ img {
 	display: block;
     margin: 0 auto;
 }
+.blog-post table{
+	display: block;
+}
 .blog-post p,
 .blog-post h1,
 .blog-post h2,
 .blog-post h3,
-.blog-post span{
+.blog-post h4,
+.blog-post h5,
+.blog-post h6,
+.blog-post span,
+.blog-post table{
 	font-family: 'Josefin Sans', sans-serif;
 	padding-left: 1.5rem;
 	padding-right: 1.5rem;
@@ -25,10 +32,22 @@ img {
 .blog-post h1,
 .blog-post h2,
 .blog-post h3{
-	padding: 1.5rem;
+	padding: 0.75rem 1.5rem;
 
 	color: #363636;
     font-size: 2rem;
     font-weight: 600;
     line-height: 1.125;
+}
+
+.blog-post p,
+.blog-post table {
+	padding-bottom: 0.75rem;
+}
+.blog-post ol,
+.blog-post ul {
+	list-style: disc;
+	padding-left: 2.3rem;
+    padding-right: 2.3rem;
+	
 }

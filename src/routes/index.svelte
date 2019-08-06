@@ -62,5 +62,5 @@ hr{
 	{:catch error}
 		<p>Oppsie!</p>
 		{error}
-	{/await}}
+	{/await}
 </div>

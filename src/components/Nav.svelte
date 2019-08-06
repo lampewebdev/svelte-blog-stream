@@ -5,30 +5,16 @@
 </script>
 
 <style>
-	.navbar{
-		background-color: #40a798;
+	.smallgap{
+		padding-left: 0.75rem;
 	}
-
-	a {
-		color: white;
-	}
-	.navbar-brand a:hover,
-	.navbar-brand a:focus {
-		color: white;
-	}
-	.navbar-end a:hover,
-	.navbar-end a:focus {
-		color: #40a798;
-	}
-
 </style>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 	<div class="navbar-brand">
 		<a class="navbar-item is-white" href="/">
 			<img src="/githublogo.png" alt="lampesblog">
-			<!-- TODO: come up with something fancy! -->
-			Web Development and more
+			<span class="smallgap">Web Development and more</span>
 		</a>
 
 		<span role="button" class="navbar-burger {showNavBar === true ? 'is-active' : ''}" aria-label="menu"
