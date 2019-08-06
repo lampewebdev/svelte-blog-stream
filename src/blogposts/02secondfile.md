@@ -2,7 +2,7 @@
 title: CSS Quickies border-radius
 slug: css-quickies-border-radius
 createdAt: 28.07.2019
-published: true
+published: false
 description: Learn how border-radius works and what fancy things it can do!
 tags: #css #webdev #beginners
 cover_image: ''

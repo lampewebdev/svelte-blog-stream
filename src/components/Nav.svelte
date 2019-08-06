@@ -5,7 +5,7 @@
 </script>
 
 <style>
-	.smallgap{
+	.smallgap {
 		padding-left: 0.75rem;
 	}
 </style>
@@ -32,6 +32,18 @@
 			</a>
 			<a class="navbar-item white" href="http://www.twitter.com/lampewebdev" target="_blank" rel="noopener">
 				Twitter
+			</a>
+			<a class="navbar-item white" href="http://www.github.com/lampewebdev" target="_blank" rel="noopener">
+				Github
+			</a>
+			<a class="navbar-item white" href="http://www.instagram.com/lampewebdev" target="_blank" rel="noopener">
+				Instagram
+			</a>
+			<a class="navbar-item white" href="http://www.dev.to/lampewebdev" target="_blank" rel="noopener">
+				Dev.to
+			</a>
+			<a class="navbar-item white" href="http://www.youtube.to/lampewebdev" target="_blank" rel="noopener">
+				Youtube
 			</a>
 		</div>
 	</div>
