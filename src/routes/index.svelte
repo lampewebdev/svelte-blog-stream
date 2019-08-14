@@ -10,6 +10,7 @@
 </script>
 
 <script>
+	import TagsList from "../components/Tagslist.svelte";
 	export let metadata;
 </script>
 
@@ -23,6 +24,14 @@
 	.button-wrapper {
 		margin: 1.5rem 0;
 	}
+	
+	.section {
+		padding-bottom: 0;
+	}
+	
+	.main-page {
+		padding-top: 3rem;
+	}
 
 	hr {
 		border: 0;
@@ -31,6 +40,7 @@
 		border-top: #363636 solid 1px;
 	}
 </style>
+
 <svelte:head>
 	<title>Blog</title>
 	<meta name="Description" content="TODO!!!">
@@ -50,7 +60,9 @@
 							</div>
 							<p class="subheader-content has-text-centered">
 								Series: {post.series}
+								
 							</p>
+
 							<hr>
 							<div class="content has-text-centered">
 								{post.description}
@@ -59,6 +71,7 @@
 						<div class="button-wrapper has-text-centered">
 							<a rel='prefetch' class="button is-primary" href='/post/{post.slug}'>Continue Reading!</a>
 						</div>
+						Tags: <TagsList tags={post.tags} />
 				</section>	
 				{/each}			
 			</div>

@@ -1,7 +1,7 @@
 ---
 title: Why is streaming while you're developing not so popular?
 slug: why-is-streaming-while-youre-developing-not-so-popular
-published: false
+published: true
 createdAt: 03.08.2019
 description: So streaming, in general, got very popular. E-Sports and gaming streams are usually the most popular. You can also find people just talking or answering questions.
 tags: javascript, webdev, beginners, discuss

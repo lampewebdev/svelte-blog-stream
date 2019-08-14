@@ -2,9 +2,9 @@
 title: This is a page for testing all markdown elements
 slug: markdownTest
 createdAt: 28.07.2019
-published: false
+published: true
 description: MarkdownTest
-tags: #css #webdev #beginners
+tags: html, webdev, dimi
 cover_image: ''
 series: general
 ---
