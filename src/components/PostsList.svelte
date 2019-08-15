@@ -36,7 +36,7 @@
                             <h1 class="title">{post.title}</h1>
                         </div>
                         <p class="subheader-content has-text-centered">
-                            Series: {post.series}
+                            Series: <a href="/series/{post.series}">{post.series}</a>
                             
                         </p>
                         <hr>
