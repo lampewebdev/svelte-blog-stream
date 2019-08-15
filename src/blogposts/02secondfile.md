@@ -5,7 +5,6 @@ createdAt: 28.07.2019
 published: true
 description: Learn how border-radius works and what fancy things it can do!
 tags: css, javascript, beginners
-cover_image: ''
 series: CSS Quickies
 ---
 

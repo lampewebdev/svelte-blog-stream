@@ -1,5 +1,6 @@
 <script>
     import TagsList from "../components/Tagslist.svelte";
+    import { fade } from "svelte/transition";
     export let metadata;
 </script>
 
@@ -33,7 +34,7 @@
 <div class="columns is-mobile is-centered">
     <div class="column is-full-mobile is-three-quarters-tablet is-half-desktop">
         {#each metadata as post}
-            <section class="section">
+            <section class="section" in:fade="{{ duration: 400 }}">
                     <div class="header-content">
                         <div class="has-text-centered">
                             <h1 class="title">{post.title}</h1>

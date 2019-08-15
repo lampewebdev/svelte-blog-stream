@@ -5,7 +5,6 @@ createdAt: 28.07.2019
 published: true
 description: MarkdownTest
 tags: html, webdev, dimi
-cover_image: ''
 series: general
 ---
 # <a name="top"></a>Markdown Test Page
