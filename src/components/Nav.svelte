@@ -1,4 +1,6 @@
 <script>
+	import { fade } from "svelte/transition";
+	
 	export let segment;
 	export let showNavBar = false;
 	const handleClick = () => showNavBar = !showNavBar;

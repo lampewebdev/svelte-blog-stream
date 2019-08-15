@@ -51,3 +51,25 @@ img {
     padding-right: 2.3rem;
 	
 }
+
+@media screen and (max-width: 1023px) {
+	.navbar-menu {
+		display: block;
+		opacity: 0;
+
+		position: absolute;   /* or float: left; width: 100%;*/
+		left: 0;
+		right: 0;
+
+		transform: translateY(-50%);
+		transition: all .2s ease-in-out;
+		pointer-events: none;
+	}
+
+	.navbar-menu.is-active {
+		opacity: 1;
+		transform: none;
+		pointer-events: auto;
+	}
+}
+

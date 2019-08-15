@@ -19,10 +19,6 @@
         padding-bottom: 0;
     }
 
-    .main-page {
-        padding-top: 3rem;
-    }
-
     hr {
         border: 0;
         display: block;
