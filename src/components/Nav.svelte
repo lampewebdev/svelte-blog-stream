@@ -1,4 +1,4 @@
-<script>	
+<script>
 	export let segment;
 	export let showNavBar = false;
 	const handleClick = () => showNavBar = !showNavBar;
@@ -16,7 +16,6 @@
 			<img src="/githublogo.png" alt="lampesblog">
 			<span class="smallgap">Web Development and more</span>
 		</a>
-
 		<span role="button" class="navbar-burger {showNavBar === true ? 'is-active' : ''}" aria-label="menu"
 			aria-expanded="false" on:click={handleClick}>
 			<span aria-hidden="true" class="white"></span>

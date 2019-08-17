@@ -1,7 +1,7 @@
 <script>
     import { fly } from "svelte/transition";
     export let post;
-</script>
+</script> 
 
 <svelte:head>
     <title>{post.metedata.title}</title>
