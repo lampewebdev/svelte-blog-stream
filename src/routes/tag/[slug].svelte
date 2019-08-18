@@ -3,8 +3,8 @@
 		try {
 			return this.fetch(`tag/${params.slug}.json`)
 				.then(request => request.json())
-				.then(metadata => {
-					return { metadata };
+				.then(blogposts => {
+					return { blogposts };
 				});
 		} catch (error) {
 			console.log(error);
@@ -14,7 +14,7 @@
 
 <script>
 	import PostList from "../../components/PostsList.svelte";
-	export let metadata;
+	export let blogposts;
 </script>
 
 <style>
@@ -24,9 +24,9 @@
 </style>
 
 <div class="main-page">
-	{#await metadata}
+	{#await blogposts}
 		<progress class="progress is-medium is-dark" max="100">45%</progress>
 	{:then value}
-		<PostList metadata={value} />
+		<PostList blogposts={value} />
 	{/await}
 </div>

@@ -4,7 +4,7 @@ slug: My-Web-Development-VS-Code-Settings-theme-Extensions-tips-and-tricks
 published: true
 createdAt: 21.07.2019
 description: Learn what settings, theme, font, extensions and other things I use in vscode
-tags: #webdev #vscode #plugins #tools
+tags: webdev vscode plugins tools
 series: Visual Studio Code
 ---
 

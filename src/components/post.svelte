@@ -4,9 +4,9 @@
 </script> 
 
 <svelte:head>
-    <title>{post.metedata.title}</title>
+    <title>{post.title}</title>
     <link rel="stylesheet" href="/monokai.css">
-    <meta name="Description" content="{post.metedata.description}">
+    <meta name="Description" content="{post.description}">
 </svelte:head>
 
 <div class="blog-post">
@@ -19,8 +19,8 @@
         >
             <section class="section">
                 <header>
-                    <h1> {post.metedata.title} </h1>
-                    <span class="createdAt">{post.metedata.createdAt}</span>
+                    <h1> {post.title} </h1>
+                    <span class="createdAt">{post.createdAt}</span>
                 </header>
                 <article>
                     {@html post.html}

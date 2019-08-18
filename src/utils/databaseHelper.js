@@ -18,7 +18,8 @@ const openDbAndCreateTable = async () => {
 				createdAt TEXT,
 				description TEXT,
 				tags TEXT,
-				series TEXT
+				series TEXT,
+				slug TEXT
 			)
     	`);		
 	} catch (error) {
@@ -33,22 +34,26 @@ const insertBlogPosts = async ({ db, blogPosts}) => {
 	}
 	const insertString = `
 		INSERT INTO blogPosts 
-		(markdown, html, title, published, createdAt, description, tags, series)
-		VALUES (?,?,?,?,?,?,?,?)
+		(markdown, html, title, published, createdAt, description, tags, series, slug)
+		VALUES (?,?,?,?,?,?,?,?,?)
 	`;
 	try {
 		const promisedInserts = [];
 		blogPosts.forEach(async blogPost => {
-			const insert = db.run(insertString,
-				blogPost.markdown,
-				blogPost.html,
-				blogPost.metadata.title,
-				blogPost.metadata.published,
-				blogPost.metadata.createdAt,
-				blogPost.metadata.description,
-				blogPost.metadata.tags,
-				blogPost.metadata.series);
-			promisedInserts.push(insert);
+			if(!!blogPost && !!blogPost.html && !!blogPost.markdown){
+				const insert = db.run(insertString,
+					blogPost.markdown,
+					blogPost.html,
+					blogPost.metadata.title || '',
+					blogPost.metadata.published || '',
+					blogPost.metadata.createdAt || '',
+					blogPost.metadata.description || '',
+					blogPost.metadata.tags || '',
+					blogPost.metadata.series || '',
+					blogPost.metadata.slug || ''
+				);
+				promisedInserts.push(insert);
+			}
 		});
 		return Promise.all(promisedInserts);
 	} catch (error) {
