@@ -1,22 +1,12 @@
 <script>
     import TagsList from "../components/Tagslist.svelte";
-    import { fade } from "svelte/transition";
+    import { fly } from "svelte/transition";
     export let blogposts;
 </script>
 
 <style>
-    .title {
-        font-size: 2rem;
-        font-weight: 300;
-        line-height: 1.125;
-    }
-
     .button-wrapper {
         margin: 1.5rem 0;
-    }
-
-    .section {
-        padding-bottom: 0;
     }
 
     hr {
@@ -26,11 +16,14 @@
         border-top: #363636 solid 1px;
     }
 </style>
-
+<div class="container">
 <div class="columns is-mobile is-centered">
     <div class="column is-full-mobile is-three-quarters-tablet is-half-desktop">
         {#each blogposts as post}
-            <section class="section" in:fade="{{ duration: 400 }}">
+            <section 
+                class="section"
+                in:fly="{{x: -60, duration: 500}}"
+            >
                     <div class="header-content">
                         <div class="has-text-centered">
                             <h1 class="title">{post.title}</h1>
@@ -51,4 +44,5 @@
             </section>	
 		{/each}			
     </div>
+</div>
 </div>

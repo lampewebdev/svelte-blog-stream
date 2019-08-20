@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "blog.lampeweb.de",
+  "description": "Web Development Blog",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
@@ -10,7 +10,7 @@
     "cy:run": "cypress run",
     "cy:open": "cypress open",
     "test": "run-p --race dev cy:run",
-    "deploy": "deploy-to-git"
+    "deploy": "netlify deploy --dir=__sapper__/export/ --prod"
   },
   "config": {
     "deployToGit": {

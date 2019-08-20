@@ -15,11 +15,12 @@
         <div 
             class="column is-full-mobile is-three-quarters-tablet is-half-desktop"
             in:fly="{{x: -60, duration: 500}}"
-            out:fly="{{x: 60, duration: 400}}"
         >
             <section class="section">
                 <header>
-                    <h1> {post.title} </h1>
+                    <div class="has-text-centered">
+                       <h1> {post.title} </h1>
+                    </div>
                     <span class="createdAt">{post.createdAt}</span>
                 </header>
                 <article>

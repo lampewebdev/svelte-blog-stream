@@ -10,15 +10,10 @@ const dev = NODE_ENV === "development";
 (async () => {
 	let db;
 	try {
-		console.log("Open and Create Table");
 		db = await openDbAndCreateTable();
-		console.log("Load markdown files");
 		const blogPosts = await markdownLoader();
-		console.log("Insert blog posts into db");
 		await insertBlogPosts({ db, blogPosts });
 	} catch (error) {
-		console.log(error);
-		console.log("closing db...");
 		db.close();
 	}
 	const dbmiddleware = () => function (req, res, next) {
