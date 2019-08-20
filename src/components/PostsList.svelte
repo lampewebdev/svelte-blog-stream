@@ -8,7 +8,11 @@
     .button-wrapper {
         margin: 1.5rem 0;
     }
-
+    .button {
+        background-color: #328076;
+        border-color: transparent;
+        color: #fff;
+    }
     hr {
         border: 0;
         display: block;
@@ -38,7 +42,7 @@
                         </div>
                     </div>
                     <div class="button-wrapper has-text-centered">
-                        <a rel='prefetch' class="button is-primary" href='/post/{post.slug}'>Continue Reading!</a>
+                        <a rel='prefetch' class="button" href='/post/{post.slug}'>Continue Reading!</a>
                     </div>
                     Tags: <TagsList tags={post.tags} />
             </section>	
