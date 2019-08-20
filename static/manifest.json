@@ -1,18 +1,18 @@
 {
-	"background_color": "#ffffff",
-	"theme_color": "#333333",
+	"background_color": "#40a798",
+	"theme_color": "#40a798",
 	"name": "Michael 'Lampe' Lazarski Blog",
 	"short_name": "Lampe's Blog",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [
 		{
-			"src": "logo-192.png",
+			"src": "githublogo.png",
 			"sizes": "192x192",
 			"type": "image/png"
 		},
 		{
-			"src": "logo-512.png",
+			"src": "githublogo.png",
 			"sizes": "512x512",
 			"type": "image/png"
 		}
