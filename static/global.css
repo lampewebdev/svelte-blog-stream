@@ -38,6 +38,8 @@ img {
 .blog-post h1,
 .blog-post h2,
 .blog-post h3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   color: #363636;
   font-size: 2rem;
   font-weight: 600;
