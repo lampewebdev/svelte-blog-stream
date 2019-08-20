@@ -13,7 +13,7 @@
 <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
 	<div class="navbar-brand">
 		<a class="navbar-item is-white" href="/">
-			<img src="/githublogo.png" alt="lampesblog">
+			<img src="/icon-512x512.png" alt="lampesblog logo">
 			<span class="smallgap">Web Development and more</span>
 		</a>
 		<span role="button" class="navbar-burger {showNavBar === true ? 'is-active' : ''}" aria-label="menu"
