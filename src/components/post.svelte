@@ -16,7 +16,7 @@
             class="column is-full-mobile is-three-quarters-tablet is-half-desktop"
             in:fly="{{x: -60, duration: 500}}"
         >
-            <section class="section">
+            <section>
                 <header>
                     <div class="has-text-centered">
                        <h1> {post.title} </h1>
